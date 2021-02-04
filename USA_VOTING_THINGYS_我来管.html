@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title>USA_VOTING_THINGYS_我来管</title>
+	<style type="text/css">
+		#trump_id{
+			height: 30px;
+			width: 30px;
+			border-radius: 50%;
+		}
+	#biden_id{
+			height: 30px;
+			width: 30px;
+			border-radius: 50%;
+		}
+	</style>
+	<script type="text/javascript">
+		function voteTrump(isRemove)
+		{
+			var current_result = document.getElementById('trump_result').innerHTML;
+	document.getElementById('trump_result').innerHTML = parseFloat(current_result) +1;
+		}
+		function removeVote()
+		{
+			var current_result = document.getElementById('trump_result').innerHTML;
+			document.getElementById('trump_result').innerHTML = parseFloat(current_result) -1;
+		}
+
+
+		function voteBiden(isRemove)
+		{
+			var current_result = document.getElementById('biden_result').innerHTML;
+	document.getElementById('biden_result').innerHTML = parseFloat(current_result) +1;
+		}
+		function removeVoteBiden()
+		{
+			var current_result = document.getElementById('biden_result').innerHTML;
+			document.getElementById('biden_result').innerHTML = parseFloat(current_result) -1;
+		}
+	</script>
+</head>
+<body>
+<div><img src="trump.png" id="trump_id">&nbsp; Donald Trump:&nbsp;&nbsp;<span id="trump_result">0</span></div> 
+<button id="trump_vote_bt" onclick="voteTrump()">Vote</button>
+<button onclick="removeVote()">Remove</button>
+<br><br><br>
+<div><img src="biden.png" id="biden_id">&nbsp; Joe Biden:&nbsp;&nbsp;<span id="biden_result">0</span><br><button id="trump_vote_bt" onclick="voteBiden()">Vote</button>
+<button onclick="removeVoteBiden()">Remove</button></div>
+<img src="voting_map.png" id="map_id">
+</body>
+</html>
